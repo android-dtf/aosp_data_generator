@@ -18,7 +18,7 @@ android:
     - sys-img-armeabi-v7a-android-22
 
 install:
-  - wget https://www.thecobraden.com/getdtf > install.sh
+  - curl -sSL https://www.thecobraden.com/getdtf > install.sh
   - chmod u+x install.sh
   - ./install.sh --debug --auto --branch dev
 
