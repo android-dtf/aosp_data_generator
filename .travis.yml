@@ -18,11 +18,14 @@ android:
 
     - sys-img-armeabi-v7a-android-22
 
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y python-pip
+
 install:
   - curl -sSL https://www.thecobraden.com/getdtf > install.sh
   - chmod u+x install.sh
   - ./install.sh --debug --auto --branch dev
-
 
 before_script:
   - echo no | android create avd --force -n test -t android-22 --abi armeabi-v7a
